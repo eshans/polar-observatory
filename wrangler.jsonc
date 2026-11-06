@@ -1,0 +1,12 @@
+// Cloudflare Workers config. Build with the cloudflare_module preset first (npm run deploy does both).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "polar-observatory",
+  "main": "./.output/server/index.mjs",
+  "assets": { "directory": "./.output/public/", "binding": "ASSETS" },
+  "compatibility_date": "2025-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  // Durable cache for the API routes (mounted as the "kv" storage in nuxt.config.ts)
+  "kv_namespaces": [{ "binding": "CACHE", "id": "f9c312b3ec404ed3979442c4a3060009" }]
+}
