@@ -24,6 +24,8 @@ npm run dev   # http://localhost:3000
 
 ## Deploy (Cloudflare Workers)
 
+Live at https://polar-observatory.shans-projects.workers.dev
+
 ```bash
 npx wrangler login   # once
 npm run deploy       # builds with the cloudflare_module preset, then wrangler deploy
